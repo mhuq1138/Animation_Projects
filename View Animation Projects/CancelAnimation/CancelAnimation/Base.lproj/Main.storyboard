@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CancelAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHx-kB-I8s">
+                                <rect key="frame" x="20" y="50" width="335" height="250"/>
+                                <color key="backgroundColor" red="0.80202546299999999" green="1" blue="0.95439814810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="emX-Ih-618"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEo-id-p7y">
+                                <rect key="frame" x="20" y="320" width="163" height="30"/>
+                                <state key="normal" title="Cancel at the Beginning"/>
+                                <connections>
+                                    <action selector="cancelAtBeginningTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXK-JA-Une"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-9G-Krr">
+                                <rect key="frame" x="20" y="360" width="121" height="30"/>
+                                <state key="normal" title="Cancel at the End"/>
+                                <connections>
+                                    <action selector="cancelAtEndTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSi-MZ-JM5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZc-vM-xWa">
+                                <rect key="frame" x="248" y="320" width="107" height="30"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="startAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4c8-ec-9Qy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5t-4z-ZQE">
+                                <rect key="frame" x="20" y="400" width="99" height="30"/>
+                                <state key="normal" title="End Anywhere"/>
+                                <connections>
+                                    <action selector="cancelAnywhereTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jqh-fq-bqe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCe-tS-sxu">
+                                <rect key="frame" x="316" y="400" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1o-zp-npm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uHx-kB-I8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1kM-LR-3dA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JCe-tS-sxu" secondAttribute="trailing" constant="20" id="4IL-m1-23B"/>
+                            <constraint firstItem="t5t-4z-ZQE" firstAttribute="top" secondItem="dAI-9G-Krr" secondAttribute="bottom" constant="5" id="6Va-4f-Mey"/>
+                            <constraint firstItem="uHx-kB-I8s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BIv-6t-nrC"/>
+                            <constraint firstItem="NEo-id-p7y" firstAttribute="top" secondItem="uHx-kB-I8s" secondAttribute="bottom" constant="20" id="EYQ-fY-Owm"/>
+                            <constraint firstItem="NEo-id-p7y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G0M-Ke-iLu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZc-vM-xWa" secondAttribute="trailing" constant="20" id="J8S-Oa-OTB"/>
+                            <constraint firstItem="JCe-tS-sxu" firstAttribute="centerY" secondItem="t5t-4z-ZQE" secondAttribute="centerY" id="Xq7-fO-i2t"/>
+                            <constraint firstItem="NEo-id-p7y" firstAttribute="top" secondItem="uHx-kB-I8s" secondAttribute="bottom" constant="20" id="ZS7-Et-P0P"/>
+                            <constraint firstItem="gZc-vM-xWa" firstAttribute="centerY" secondItem="NEo-id-p7y" secondAttribute="centerY" id="Zol-rb-od5"/>
+                            <constraint firstItem="t5t-4z-ZQE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k6G-QG-ei4"/>
+                            <constraint firstItem="dAI-9G-Krr" firstAttribute="top" secondItem="NEo-id-p7y" secondAttribute="bottom" constant="5" id="mZN-LH-9kL"/>
+                            <constraint firstItem="dAI-9G-Krr" firstAttribute="top" secondItem="NEo-id-p7y" secondAttribute="bottom" constant="10" id="mej-ec-EfV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uHx-kB-I8s" secondAttribute="trailing" constant="20" id="oLE-Ub-Zad"/>
+                            <constraint firstItem="t5t-4z-ZQE" firstAttribute="top" secondItem="dAI-9G-Krr" secondAttribute="bottom" constant="10" id="tTM-8K-r6q"/>
+                            <constraint firstItem="dAI-9G-Krr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wuW-pK-PYl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="uHx-kB-I8s" id="2XT-yP-pqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

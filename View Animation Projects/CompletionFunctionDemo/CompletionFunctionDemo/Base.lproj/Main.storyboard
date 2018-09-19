@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CompletionFunctionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-ay-0DL">
+                                <rect key="frame" x="20" y="50" width="335" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="CSl-fp-zeU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-Lp-1IK">
+                                <rect key="frame" x="20" y="310" width="107" height="30"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="startAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beh-4P-2zG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stopAnimation argument:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpK-Rj-SPp">
+                                <rect key="frame" x="20" y="355" width="193" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cce-VG-RaH">
+                                <rect key="frame" x="30" y="381" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="F10-iB-ma4"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="false"/>
+                                    <segment title="true"/>
+                                </segments>
+                                <connections>
+                                    <action selector="stopAnimationFlagChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CDB-RP-ySL"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-Bo-1I8">
+                                <rect key="frame" x="20" y="419" width="105" height="30"/>
+                                <state key="normal" title="Stop Animation"/>
+                                <connections>
+                                    <action selector="stopAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTg-Rt-wQI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vlr-Bo-1I8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3KP-8z-HiX"/>
+                            <constraint firstItem="H2h-Lp-1IK" firstAttribute="top" secondItem="Qmw-ay-0DL" secondAttribute="bottom" constant="10" id="FRC-Wi-Rvm"/>
+                            <constraint firstItem="Qmw-ay-0DL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fzm-lx-Bpz"/>
+                            <constraint firstItem="Cce-VG-RaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="IPK-To-D77"/>
+                            <constraint firstItem="Qmw-ay-0DL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="OMd-Ea-9gb"/>
+                            <constraint firstItem="Vlr-Bo-1I8" firstAttribute="top" secondItem="Cce-VG-RaH" secondAttribute="bottom" constant="10" id="S2H-aW-g9I"/>
+                            <constraint firstItem="Cce-VG-RaH" firstAttribute="top" secondItem="vpK-Rj-SPp" secondAttribute="bottom" constant="5" id="Szf-wh-vwJ"/>
+                            <constraint firstItem="vpK-Rj-SPp" firstAttribute="top" secondItem="H2h-Lp-1IK" secondAttribute="bottom" constant="15" id="X3u-fB-EdS"/>
+                            <constraint firstItem="H2h-Lp-1IK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eUd-X5-odw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qmw-ay-0DL" secondAttribute="trailing" constant="20" id="oda-Eg-YLW"/>
+                            <constraint firstItem="vpK-Rj-SPp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="z9p-fc-4WE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="Qmw-ay-0DL" id="hLo-8c-PUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

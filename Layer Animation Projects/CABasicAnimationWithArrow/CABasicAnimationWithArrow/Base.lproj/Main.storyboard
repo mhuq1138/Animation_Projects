@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CABasicAnimationWithArrow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J82-CI-abh" customClass="ArrowView" customModule="CABasicAnimationWithArrow" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="50" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="OLO-aT-AB5"/>
+                                    <constraint firstAttribute="height" constant="240" id="geq-NB-Bgb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-aL-mKU">
+                                <rect key="frame" x="20" y="300" width="210" height="30"/>
+                                <state key="normal" title="Rotate with to and from Values"/>
+                                <connections>
+                                    <action selector="rotateWithValuesTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIg-bI-N3Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXp-1R-RQb">
+                                <rect key="frame" x="20" y="335" width="160" height="30"/>
+                                <state key="normal" title="Rotate Shortened Form"/>
+                                <connections>
+                                    <action selector="rotateShortenedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVh-QR-ptG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsk-YG-vF8">
+                                <rect key="frame" x="20" y="370" width="162" height="30"/>
+                                <state key="normal" title="Rotate Alternative Form"/>
+                                <connections>
+                                    <action selector="rotateAlternativeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAX-UO-jBe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8i-iq-ubY">
+                                <rect key="frame" x="20" y="405" width="144" height="30"/>
+                                <state key="normal" title="Waggle Using Values"/>
+                                <connections>
+                                    <action selector="waggleWithValuesTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epx-QO-al5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQU-GV-MhD">
+                                <rect key="frame" x="20" y="440" width="167" height="30"/>
+                                <state key="normal" title="Waggle Shortened Form"/>
+                                <connections>
+                                    <action selector="waggleShortenedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O40-aj-9nM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J82-CI-abh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B3K-g6-2nB"/>
+                            <constraint firstItem="Xsk-YG-vF8" firstAttribute="top" secondItem="tXp-1R-RQb" secondAttribute="bottom" constant="5" id="BPF-w6-ifo"/>
+                            <constraint firstItem="tXp-1R-RQb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F52-tr-BUR"/>
+                            <constraint firstItem="tXp-1R-RQb" firstAttribute="top" secondItem="7Sj-aL-mKU" secondAttribute="bottom" constant="5" id="GPs-bn-wEa"/>
+                            <constraint firstItem="7Sj-aL-mKU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hs4-lV-JDT"/>
+                            <constraint firstItem="TQU-GV-MhD" firstAttribute="top" secondItem="J8i-iq-ubY" secondAttribute="bottom" constant="5" id="MiC-41-lZR"/>
+                            <constraint firstItem="J82-CI-abh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WSe-YQ-Lp0"/>
+                            <constraint firstItem="J8i-iq-ubY" firstAttribute="top" secondItem="Xsk-YG-vF8" secondAttribute="bottom" constant="5" id="afs-PK-c9H"/>
+                            <constraint firstItem="7Sj-aL-mKU" firstAttribute="top" secondItem="J82-CI-abh" secondAttribute="bottom" constant="10" id="cGC-Da-YMn"/>
+                            <constraint firstItem="TQU-GV-MhD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hdm-OG-aNN"/>
+                            <constraint firstItem="Xsk-YG-vF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i3I-pr-84G"/>
+                            <constraint firstItem="J8i-iq-ubY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="paw-Kz-gBL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="arrowView" destination="J82-CI-abh" id="4T8-lQ-Vkc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

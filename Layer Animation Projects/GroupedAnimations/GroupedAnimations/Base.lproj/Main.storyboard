@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GroupedAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4X5-u7-NEz">
+                                <rect key="frame" x="20" y="50" width="335" height="300"/>
+                                <color key="backgroundColor" red="0.69816377740000002" green="0.98545848540000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Fr4-0u-xl8"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-WY-TRt">
+                                <rect key="frame" x="20" y="355" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Rotate With Damping at End"/>
+                                    <segment title="Rotating Arrow on Track"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chooseAnimation:" destination="BYZ-38-t0r" eventType="valueChanged" id="TYn-NJ-0zF"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B77-lj-ZOT">
+                                <rect key="frame" x="298" y="393" width="57" height="30"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqw-qT-9Yp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vyh-WY-TRt" secondAttribute="trailing" constant="20" id="8TR-wj-eHo"/>
+                            <constraint firstItem="B77-lj-ZOT" firstAttribute="top" secondItem="vyh-WY-TRt" secondAttribute="bottom" constant="10" id="Jok-XQ-oHq"/>
+                            <constraint firstItem="4X5-u7-NEz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VJc-id-u50"/>
+                            <constraint firstItem="vyh-WY-TRt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dwh-gi-MKy"/>
+                            <constraint firstItem="4X5-u7-NEz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="jWW-zu-At4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B77-lj-ZOT" secondAttribute="trailing" constant="20" id="mGW-aS-mqQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4X5-u7-NEz" secondAttribute="trailing" constant="20" id="tw8-6b-FP2"/>
+                            <constraint firstItem="vyh-WY-TRt" firstAttribute="top" secondItem="4X5-u7-NEz" secondAttribute="bottom" constant="5" id="yvx-u6-886"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="B77-lj-ZOT" id="f4c-yI-d7g"/>
+                        <outlet property="displayView" destination="4X5-u7-NEz" id="y5f-bC-r2c"/>
+                        <outlet property="segmentedControl" destination="vyh-WY-TRt" id="Bid-BP-A7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdS-yy-tym">
+                                <rect key="frame" x="20" y="50" width="100" height="30"/>
+                                <state key="normal" title="Run Animation"/>
+                                <connections>
+                                    <action selector="runAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCw-6m-7LM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-4z-RRa">
+                                <rect key="frame" x="20" y="290" width="221" height="30"/>
+                                <state key="normal" title="Change Layer background Color"/>
+                                <connections>
+                                    <action selector="changeBackgroundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="60d-BB-yje"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzi-gT-j6Z">
+                                <rect key="frame" x="20" y="100" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="7rJ-v2-MVm"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZfX-tB-aVc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cdS-yy-tym" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="0PS-TZ-g7Y"/>
+                            <constraint firstItem="Sie-4z-RRa" firstAttribute="top" secondItem="uzi-gT-j6Z" secondAttribute="bottom" constant="130" id="0xH-iu-r6g"/>
+                            <constraint firstItem="Sie-4z-RRa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F01-Ed-52e"/>
+                            <constraint firstItem="uzi-gT-j6Z" firstAttribute="top" secondItem="cdS-yy-tym" secondAttribute="bottom" constant="20" id="MaB-lk-5i5"/>
+                            <constraint firstItem="cdS-yy-tym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n4E-TO-AbQ"/>
+                            <constraint firstItem="uzi-gT-j6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ujn-iH-uFb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="uzi-gT-j6Z" id="Gcr-0j-tbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

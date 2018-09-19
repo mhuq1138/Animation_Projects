@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ActionWithDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-UK-ptg">
+                                <rect key="frame" x="20" y="50" width="335" height="300"/>
+                                <color key="backgroundColor" red="0.69816377740000002" green="0.98545848540000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3Qa-u1-CNi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNO-LB-IMn">
+                                <rect key="frame" x="20" y="360" width="115" height="30"/>
+                                <state key="normal" title="Animate Position"/>
+                                <connections>
+                                    <action selector="animatePositionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vz-7e-Wxl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOW-B5-WxZ">
+                                <rect key="frame" x="20" y="480" width="140" height="30"/>
+                                <state key="normal" title="Transition Animation"/>
+                                <connections>
+                                    <action selector="transitionAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxQ-Q7-zb2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-nt-ypv">
+                                <rect key="frame" x="20" y="400" width="81" height="30"/>
+                                <state key="normal" title="Pop a Layer"/>
+                                <connections>
+                                    <action selector="popALayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ej-Hh-r0V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzM-IL-NRp">
+                                <rect key="frame" x="20" y="440" width="87" height="30"/>
+                                <state key="normal" title="Fade a Layer"/>
+                                <connections>
+                                    <action selector="fadeALayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfd-dB-SNs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtG-s8-MzB">
+                                <rect key="frame" x="316" y="360" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUM-yA-bSF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2y3-UK-ptg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0jF-js-FRJ"/>
+                            <constraint firstItem="dNO-LB-IMn" firstAttribute="top" secondItem="2y3-UK-ptg" secondAttribute="bottom" constant="10" id="9id-2p-6jb"/>
+                            <constraint firstItem="EOW-B5-WxZ" firstAttribute="top" secondItem="uzM-IL-NRp" secondAttribute="bottom" constant="10" id="BHZ-1a-J1i"/>
+                            <constraint firstItem="Wgf-nt-ypv" firstAttribute="top" secondItem="dNO-LB-IMn" secondAttribute="bottom" constant="10" id="NJ1-gW-SFI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2y3-UK-ptg" secondAttribute="trailing" constant="20" id="RZP-8k-cGs"/>
+                            <constraint firstItem="uzM-IL-NRp" firstAttribute="top" secondItem="Wgf-nt-ypv" secondAttribute="bottom" constant="10" id="XPG-fD-hSC"/>
+                            <constraint firstItem="Wgf-nt-ypv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="erR-ES-o5y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KtG-s8-MzB" secondAttribute="trailing" constant="20" id="ics-jV-WzZ"/>
+                            <constraint firstItem="KtG-s8-MzB" firstAttribute="top" secondItem="2y3-UK-ptg" secondAttribute="bottom" constant="10" id="mSc-NV-IiD"/>
+                            <constraint firstItem="dNO-LB-IMn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qfo-6p-tWv"/>
+                            <constraint firstItem="2y3-UK-ptg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="w7Q-eM-anp"/>
+                            <constraint firstItem="uzM-IL-NRp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wg8-Ch-wk0"/>
+                            <constraint firstItem="EOW-B5-WxZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y06-fT-9dn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="2y3-UK-ptg" id="KQD-OJ-RDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

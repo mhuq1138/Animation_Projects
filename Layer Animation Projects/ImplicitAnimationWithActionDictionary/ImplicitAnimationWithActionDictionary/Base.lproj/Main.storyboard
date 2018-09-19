@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImplicitAnimationWithActionDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-5U-g8E">
+                                <rect key="frame" x="20" y="50" width="335" height="300"/>
+                                <color key="backgroundColor" red="0.69816377740000002" green="0.98545848540000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="BBW-Hb-kbQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-Jl-9XQ">
+                                <rect key="frame" x="20" y="360" width="206" height="30"/>
+                                <state key="normal" title="Animation in Action Dictionary"/>
+                                <connections>
+                                    <action selector="actionDictionaryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hc-Zk-fUx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-Ne-jgB">
+                                <rect key="frame" x="20" y="395" width="243" height="30"/>
+                                <state key="normal" title="Animation using CAAction Subclass"/>
+                                <connections>
+                                    <action selector="actionSubclassTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2vj-EJ-ZSN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-ab-O1P">
+                                <rect key="frame" x="316" y="470" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lxa-tQ-6QD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z6-6u-oba">
+                                <rect key="frame" x="20" y="430" width="307" height="30"/>
+                                <state key="normal" title="Animation using Modified CAAction Subclass"/>
+                                <connections>
+                                    <action selector="modifiedActionSubclassTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LN7-Lu-RYJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6KV-5U-g8E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="3U5-ka-j41"/>
+                            <constraint firstItem="cAe-ab-O1P" firstAttribute="top" secondItem="0z6-6u-oba" secondAttribute="bottom" constant="10" id="EtI-Ev-kYt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6KV-5U-g8E" secondAttribute="trailing" constant="20" id="ShK-oT-NEu"/>
+                            <constraint firstItem="6KV-5U-g8E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="anr-Sh-tv0"/>
+                            <constraint firstItem="SUY-Jl-9XQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bak-PQ-awK"/>
+                            <constraint firstItem="0z6-6u-oba" firstAttribute="top" secondItem="OWe-Ne-jgB" secondAttribute="bottom" constant="5" id="dVs-Lf-mbt"/>
+                            <constraint firstItem="OWe-Ne-jgB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="e4G-RJ-yMn"/>
+                            <constraint firstItem="SUY-Jl-9XQ" firstAttribute="top" secondItem="6KV-5U-g8E" secondAttribute="bottom" constant="10" id="iDJ-QG-0eX"/>
+                            <constraint firstItem="0z6-6u-oba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kUM-zy-xJ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cAe-ab-O1P" secondAttribute="trailing" constant="20" id="mMS-dI-egP"/>
+                            <constraint firstItem="OWe-Ne-jgB" firstAttribute="top" secondItem="SUY-Jl-9XQ" secondAttribute="bottom" constant="5" id="yNx-2Y-WfL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="6KV-5U-g8E" id="gU4-tl-fN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

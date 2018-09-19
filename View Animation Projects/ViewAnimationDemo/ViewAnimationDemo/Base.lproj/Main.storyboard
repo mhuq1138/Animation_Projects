@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-7k-Df6">
+                                <rect key="frame" x="20" y="50" width="335" height="300"/>
+                                <color key="backgroundColor" red="0.80202546299999999" green="1" blue="0.95439814810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="0tx-eG-drS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXB-Pt-Ugu">
+                                <rect key="frame" x="20" y="370" width="126" height="30"/>
+                                <state key="normal" title="Begin and Commit"/>
+                                <connections>
+                                    <action selector="beginAndCommitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Uy-Cg-D1i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-ah-isa">
+                                <rect key="frame" x="20" y="405" width="159" height="30"/>
+                                <state key="normal" title="Block-based Animation"/>
+                                <connections>
+                                    <action selector="blockBasedAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xu4-Uo-Xc6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1I-AP-PZa">
+                                <rect key="frame" x="20" y="440" width="126" height="30"/>
+                                <state key="normal" title="Property Animator"/>
+                                <connections>
+                                    <action selector="propertyAnimatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8v-tY-jKz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdA-2Y-rh7">
+                                <rect key="frame" x="20" y="480" width="335" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qFU-jp-BmV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdA-2Y-rh7" secondAttribute="trailing" constant="20" id="2EF-2B-R47"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vaI-7k-Df6" secondAttribute="trailing" constant="20" id="AYi-hR-X4j"/>
+                            <constraint firstItem="a8X-ah-isa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cjh-Oe-e5p"/>
+                            <constraint firstItem="a8X-ah-isa" firstAttribute="top" secondItem="xXB-Pt-Ugu" secondAttribute="bottom" constant="5" id="Jqr-1M-kre"/>
+                            <constraint firstItem="qdA-2Y-rh7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MS8-nq-JbC"/>
+                            <constraint firstItem="Y1I-AP-PZa" firstAttribute="top" secondItem="a8X-ah-isa" secondAttribute="bottom" constant="5" id="NIM-v2-Yea"/>
+                            <constraint firstItem="qdA-2Y-rh7" firstAttribute="top" secondItem="Y1I-AP-PZa" secondAttribute="bottom" constant="10" id="NwW-Gg-VhE"/>
+                            <constraint firstItem="vaI-7k-Df6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NxK-gO-dGw"/>
+                            <constraint firstItem="vaI-7k-Df6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gEC-Cr-SgN"/>
+                            <constraint firstItem="xXB-Pt-Ugu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ieR-Hv-Ym7"/>
+                            <constraint firstItem="xXB-Pt-Ugu" firstAttribute="top" secondItem="vaI-7k-Df6" secondAttribute="bottom" constant="20" id="oWV-Dg-J2I"/>
+                            <constraint firstItem="Y1I-AP-PZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xQU-Z5-hfm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="vaI-7k-Df6" id="lA0-f8-LVg"/>
+                        <outlet property="label" destination="qdA-2Y-rh7" id="LyM-rH-0Uu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

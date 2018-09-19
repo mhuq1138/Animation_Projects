@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayerTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6V-b0-31M">
+                                <rect key="frame" x="87.5" y="50" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.69816377740000002" green="0.98545848540000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ut6-zy-TFE"/>
+                                    <constraint firstAttribute="height" constant="200" id="eCE-MO-2rQ"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-rR-4Eh">
+                                <rect key="frame" x="20" y="285" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Fade"/>
+                                    <segment title="Move In"/>
+                                    <segment title="Reveal"/>
+                                    <segment title="Push"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="etu-as-CqT"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transition Subtype" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-2N-8PA">
+                                <rect key="frame" x="20" y="323" width="91" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QkT-f7-mhz">
+                                <rect key="frame" x="20" y="338" width="335" height="29"/>
+                                <segments>
+                                    <segment title="From Right"/>
+                                    <segment title="From Left"/>
+                                    <segment title="From Top"/>
+                                    <segment title="From Bottom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="subtypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tIz-p0-MMb"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXu-Id-kqU">
+                                <rect key="frame" x="298" y="376" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b15-JT-zgh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transition Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-40-CMa">
+                                <rect key="frame" x="20" y="270" width="74" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DD8-2N-8PA" firstAttribute="top" secondItem="HnR-rR-4Eh" secondAttribute="bottom" constant="10" id="8i7-KS-o8E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yXu-Id-kqU" secondAttribute="trailing" constant="20" id="AWV-rY-Vsz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HnR-rR-4Eh" secondAttribute="trailing" constant="20" id="ArR-Qp-Ufd"/>
+                            <constraint firstItem="HnR-rR-4Eh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ddb-HR-76m"/>
+                            <constraint firstItem="HnR-rR-4Eh" firstAttribute="top" secondItem="Ngd-40-CMa" secondAttribute="bottom" constant="3" id="Fgy-8R-W7G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QkT-f7-mhz" secondAttribute="trailing" constant="20" id="HGq-YP-Qm9"/>
+                            <constraint firstItem="Ngd-40-CMa" firstAttribute="top" secondItem="B6V-b0-31M" secondAttribute="bottom" constant="20" id="MPm-o0-X1L"/>
+                            <constraint firstItem="Ngd-40-CMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Tq4-HN-jsV"/>
+                            <constraint firstItem="B6V-b0-31M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ZYR-p9-mUm"/>
+                            <constraint firstItem="QkT-f7-mhz" firstAttribute="top" secondItem="DD8-2N-8PA" secondAttribute="bottom" constant="3" id="fdf-4K-vF4"/>
+                            <constraint firstItem="B6V-b0-31M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvJ-3L-yoF"/>
+                            <constraint firstItem="yXu-Id-kqU" firstAttribute="top" secondItem="QkT-f7-mhz" secondAttribute="bottom" constant="10" id="nef-7q-SzB"/>
+                            <constraint firstItem="QkT-f7-mhz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wBw-yG-2Q2"/>
+                            <constraint firstItem="DD8-2N-8PA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x1m-9r-JYh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="yXu-Id-kqU" id="4fr-an-Ajj"/>
+                        <outlet property="displayView" destination="B6V-b0-31M" id="xZ6-9m-pjV"/>
+                        <outlet property="segmentedControl" destination="QkT-f7-mhz" id="bj7-DV-sRO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

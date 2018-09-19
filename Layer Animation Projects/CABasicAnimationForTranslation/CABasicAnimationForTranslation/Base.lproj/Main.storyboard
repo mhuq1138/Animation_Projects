@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CABasicAnimationForTranslation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-8y-lsj">
+                                <rect key="frame" x="20" y="50" width="335" height="400"/>
+                                <color key="backgroundColor" red="0.69816377740000002" green="0.98545848540000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="sh8-dy-P0Q"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIB-Zc-wOd">
+                                <rect key="frame" x="20" y="460" width="234" height="30"/>
+                                <state key="normal" title="Animation with from and to Values"/>
+                                <connections>
+                                    <action selector="animationWithFromToValueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMD-1M-nY1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1c-QF-QS4">
+                                <rect key="frame" x="20" y="500" width="228" height="30"/>
+                                <state key="normal" title="Animation Using Shortened Form"/>
+                                <connections>
+                                    <action selector="animationUsingShortenedFormTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4c-AK-8b0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1El-05-euB">
+                                <rect key="frame" x="20" y="540" width="165" height="30"/>
+                                <state key="normal" title="Autoreverse and Repeat"/>
+                                <connections>
+                                    <action selector="autoreverseAndRepeatTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SFq-ad-sWI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3gr-8y-lsj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="66m-Vs-7Iu"/>
+                            <constraint firstItem="WIB-Zc-wOd" firstAttribute="top" secondItem="3gr-8y-lsj" secondAttribute="bottom" constant="10" id="ASc-qr-vg5"/>
+                            <constraint firstItem="K1c-QF-QS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E9R-BG-yOs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gr-8y-lsj" secondAttribute="trailing" constant="20" id="NKk-dA-dbO"/>
+                            <constraint firstItem="K1c-QF-QS4" firstAttribute="top" secondItem="WIB-Zc-wOd" secondAttribute="bottom" constant="10" id="azp-nB-Ca9"/>
+                            <constraint firstItem="WIB-Zc-wOd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="chj-Ju-Mwa"/>
+                            <constraint firstItem="3gr-8y-lsj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="dQY-N8-edV"/>
+                            <constraint firstItem="1El-05-euB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qFA-PQ-2az"/>
+                            <constraint firstItem="1El-05-euB" firstAttribute="top" secondItem="K1c-QF-QS4" secondAttribute="bottom" constant="10" id="sFt-4d-yyb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="3gr-8y-lsj" id="GQG-nN-qCC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

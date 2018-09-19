@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FieldBehaviors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yo9-Pc-4CE">
+                                <rect key="frame" x="20" y="50" width="335" height="350"/>
+                                <color key="backgroundColor" red="1" green="0.95887888669999999" blue="0.5814735231" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="4cC-5e-k87"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukm-ox-X0o">
+                                <rect key="frame" x="20" y="410" width="93" height="30"/>
+                                <state key="normal" title="Delayed Drag"/>
+                                <connections>
+                                    <action selector="delayedDragTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZeZ-bN-Dw4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPc-Xv-8CH">
+                                <rect key="frame" x="316" y="410" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9U-VQ-1Nx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-Do-aeQ">
+                                <rect key="frame" x="20" y="445" width="95" height="30"/>
+                                <state key="normal" title="Linear Gravity"/>
+                                <connections>
+                                    <action selector="linearGravityTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ce8-6I-yhe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMo-Rn-aLl">
+                                <rect key="frame" x="20" y="480" width="92" height="30"/>
+                                <state key="normal" title="Electric Field "/>
+                                <connections>
+                                    <action selector="electricFieldTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifb-b7-HFJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysy-ia-cmR">
+                                <rect key="frame" x="20" y="515" width="101" height="30"/>
+                                <state key="normal" title="Magnetic Field"/>
+                                <connections>
+                                    <action selector="magneticFieldTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5P-aJ-7oU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ysy-ia-cmR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Fe-U8-tPh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QPc-Xv-8CH" secondAttribute="trailing" constant="20" id="1cF-3t-0aA"/>
+                            <constraint firstItem="Zxv-Do-aeQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Jo-cr-dm9"/>
+                            <constraint firstItem="Ukm-ox-X0o" firstAttribute="top" secondItem="yo9-Pc-4CE" secondAttribute="bottom" constant="10" id="BTu-gJ-gxD"/>
+                            <constraint firstItem="KMo-Rn-aLl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="P6t-AQ-l5u"/>
+                            <constraint firstItem="yo9-Pc-4CE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WQ8-eq-iyf"/>
+                            <constraint firstItem="Zxv-Do-aeQ" firstAttribute="top" secondItem="Ukm-ox-X0o" secondAttribute="bottom" constant="5" id="a9Q-Jg-zKQ"/>
+                            <constraint firstItem="yo9-Pc-4CE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="dCY-rJ-wRh"/>
+                            <constraint firstItem="Ysy-ia-cmR" firstAttribute="top" secondItem="KMo-Rn-aLl" secondAttribute="bottom" constant="5" id="g9f-lt-562"/>
+                            <constraint firstItem="QPc-Xv-8CH" firstAttribute="top" secondItem="yo9-Pc-4CE" secondAttribute="bottom" constant="10" id="n8p-pr-ITX"/>
+                            <constraint firstItem="Ukm-ox-X0o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="re1-g4-3ge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yo9-Pc-4CE" secondAttribute="trailing" constant="20" id="tY6-J7-czq"/>
+                            <constraint firstItem="KMo-Rn-aLl" firstAttribute="top" secondItem="Zxv-Do-aeQ" secondAttribute="bottom" constant="5" id="uCU-Pj-nzM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="yo9-Pc-4CE" id="C3o-kW-gyV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

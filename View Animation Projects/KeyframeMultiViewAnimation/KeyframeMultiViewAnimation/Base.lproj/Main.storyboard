@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyframeMultiViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5r-3C-QNQ">
+                                <rect key="frame" x="20" y="50" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnF-NX-75n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTS-HB-BTx">
+                                <rect key="frame" x="316" y="50" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUa-lM-3m6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-le-nvB">
+                                <rect key="frame" x="20" y="90" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5fW-Bi-D5h"/>
+                                    <constraint firstAttribute="width" constant="70" id="lKZ-KK-Y2f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-hP-Gec">
+                                <rect key="frame" x="95" y="90" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RIs-ey-zBn"/>
+                                    <constraint firstAttribute="width" constant="70" id="pya-pW-cba"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3k-di-NU6">
+                                <rect key="frame" x="170" y="90" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="G28-7Q-Lsf"/>
+                                    <constraint firstAttribute="height" constant="30" id="IaP-4r-Ulp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-CC-XA3">
+                                <rect key="frame" x="245" y="90" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tct-c6-RdV"/>
+                                    <constraint firstAttribute="width" constant="70" id="fED-kC-wuc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F8E-hP-Gec" firstAttribute="centerY" secondItem="gDb-le-nvB" secondAttribute="centerY" id="1zA-Hn-byo"/>
+                            <constraint firstItem="Y6B-CC-XA3" firstAttribute="leading" secondItem="b3k-di-NU6" secondAttribute="trailing" constant="5" id="NiM-tn-Ohy"/>
+                            <constraint firstItem="d5r-3C-QNQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UWT-S3-aNA"/>
+                            <constraint firstItem="jTS-HB-BTx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Ydg-Qx-kQu"/>
+                            <constraint firstItem="Y6B-CC-XA3" firstAttribute="centerY" secondItem="gDb-le-nvB" secondAttribute="centerY" id="fJ0-FQ-Vue"/>
+                            <constraint firstItem="gDb-le-nvB" firstAttribute="top" secondItem="d5r-3C-QNQ" secondAttribute="bottom" constant="10" id="gdQ-Tf-WRp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jTS-HB-BTx" secondAttribute="trailing" constant="20" id="goi-wh-MuE"/>
+                            <constraint firstItem="d5r-3C-QNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="itl-Gv-4JT"/>
+                            <constraint firstItem="gDb-le-nvB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="izs-r8-HtD"/>
+                            <constraint firstItem="b3k-di-NU6" firstAttribute="centerY" secondItem="gDb-le-nvB" secondAttribute="centerY" id="jki-He-MYn"/>
+                            <constraint firstItem="b3k-di-NU6" firstAttribute="leading" secondItem="F8E-hP-Gec" secondAttribute="trailing" constant="5" id="nQs-rs-I8a"/>
+                            <constraint firstItem="F8E-hP-Gec" firstAttribute="leading" secondItem="gDb-le-nvB" secondAttribute="trailing" constant="5" id="zcq-On-49L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="views" destination="gDb-le-nvB" collectionClass="NSMutableArray" id="SNU-xb-FIc"/>
+                        <outletCollection property="views" destination="F8E-hP-Gec" collectionClass="NSMutableArray" id="JKi-3i-qGa"/>
+                        <outletCollection property="views" destination="b3k-di-NU6" collectionClass="NSMutableArray" id="dvA-mE-Bln"/>
+                        <outletCollection property="views" destination="Y6B-CC-XA3" collectionClass="NSMutableArray" id="AVr-Pr-8Ue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
